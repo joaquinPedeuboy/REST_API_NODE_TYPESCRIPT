@@ -7,7 +7,6 @@ export const handleInputErrors = (req : Request, res : Response, next : NextFunc
     if(!errors.isEmpty()){
         return res.status(400).json({errors: errors.array()})
     }
-    console.log('desde middleware')
 
     next()
 }
